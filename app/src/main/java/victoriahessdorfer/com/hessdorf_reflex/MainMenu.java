@@ -1,9 +1,11 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -33,5 +35,14 @@ public class MainMenu extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /* On Single Player Button Click */
+    public void openSinglePlayerMode(View view) {
+
+        // note: FromActivity.class, ToActivity.class
+        Intent intent = new Intent(this, SinglePlayerMode.class);
+        startActivity(intent);
+
     }
 }

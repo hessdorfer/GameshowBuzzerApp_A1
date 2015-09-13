@@ -6,4 +6,5 @@
     <string name="SinglePlayerButton">Single Player</string>
     <string name="MultiPlayerButton">Multi Player</string>
     <string name="StatsButton">View Stats</string>
+    <string name="title_activity_single_player_mode">"Single Player "</string>
 </resources>

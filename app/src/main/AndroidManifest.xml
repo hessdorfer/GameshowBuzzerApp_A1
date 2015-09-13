@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SinglePlayerMode"
+            android:label="@string/title_activity_single_player_mode"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="victoriahessdorfer.com.hessdorf_reflex.MainMenu" />
+        </activity>
     </application>
 
 </manifest>
