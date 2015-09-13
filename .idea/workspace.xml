@@ -39,12 +39,12 @@
       <file leaf-file-name="activity_main_menu.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_menu.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68456376">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.70469797">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#587#615#0" expanded="true" />
-                <element signature="e#862#889#0" expanded="true" />
-                <element signature="e#1181#1202#0" expanded="true" />
+                <element signature="e#349#377#0" expanded="true" />
+                <element signature="e#701#728#0" expanded="true" />
+                <element signature="e#1004#1025#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1504,8 +1504,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="25" />
+    <option name="x" value="83" />
+    <option name="y" value="23" />
     <option name="width" value="1188" />
     <option name="height" value="918" />
   </component>
@@ -1612,6 +1612,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/src/main/res/values/strings.xml" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1771,7 +1772,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="25" width="1188" height="918" extended-state="0" />
+    <frame x="83" y="23" width="1188" height="918" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1829,12 +1830,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68456376">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.70469797">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#587#615#0" expanded="true" />
-            <element signature="e#862#889#0" expanded="true" />
-            <element signature="e#1181#1202#0" expanded="true" />
+            <element signature="e#349#377#0" expanded="true" />
+            <element signature="e#701#728#0" expanded="true" />
+            <element signature="e#1004#1025#0" expanded="true" />
           </folding>
         </state>
       </provider>
