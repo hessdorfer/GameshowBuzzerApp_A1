@@ -7,6 +7,7 @@
     <string name="MultiPlayerButton">Multi Player</string>
     <string name="StatsButton">View Stats</string>
     <string name="title_activity_single_player_mode">"Single Player Mode"</string>
+    <string name="click_quick">"CLICK ME, QUICK!"</string>
 
     <string name = "single_player_info">"Here's some information about being a single player."</string>
     <string name = "ok">"OK"</string>
