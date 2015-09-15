@@ -44,14 +44,14 @@
       <file leaf-file-name="SinglePlayerMode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerMode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11764706">
-              <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.20588236">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1451#1627#0" expanded="true" />
-                <element signature="e#1626#1627#0" expanded="true" />
-                <element signature="e#2621#2857#0" expanded="true" />
-                <element signature="e#2856#2857#0" expanded="true" />
+                <element signature="e#1705#1881#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+                <element signature="e#2875#3111#0" expanded="true" />
+                <element signature="e#3110#3111#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1535,12 +1535,19 @@
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="55" />
+    <option name="x" value="193" />
+    <option name="y" value="97" />
     <option name="width" value="1188" />
     <option name="height" value="918" />
   </component>
@@ -1889,7 +1896,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="55" width="1188" height="918" extended-state="0" />
+    <frame x="193" y="97" width="1188" height="918" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1937,10 +1944,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1451#1627#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#2621#2857#0" expanded="true" />
-            <element signature="e#2856#2857#0" expanded="true" />
+            <element signature="e#1705#1881#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2875#3111#0" expanded="true" />
+            <element signature="e#3110#3111#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2097,14 +2104,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11764706">
-          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.20588236">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1451#1627#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#2621#2857#0" expanded="true" />
-            <element signature="e#2856#2857#0" expanded="true" />
+            <element signature="e#1705#1881#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2875#3111#0" expanded="true" />
+            <element signature="e#3110#3111#0" expanded="true" />
           </folding>
         </state>
       </provider>
