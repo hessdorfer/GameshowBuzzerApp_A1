@@ -94,6 +94,7 @@ public class SinglePlayerMode extends AppCompatActivity {
 
     protected void displayTimeTaken(long endTime){
 
+        /*
         TextView textView = new TextView(this);
         textView.setTextSize(40);
 
@@ -105,17 +106,27 @@ public class SinglePlayerMode extends AppCompatActivity {
         }
         textView.setText(string);
         setContentView(textView);
+        */
 
-        /*
+        String string;
+        if (endTime == -1) {
+            string = "Too fast! Try again.";
+        } else {
+            string = "Your score was: " + (endTime - startTime) + " ms.";
+        }
+
+        final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
+        infoDialog.setMessage(string);
+        infoDialog.show();
+
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                infoDialog.dismiss();
                 waitForGame();
             }
-        }, 1000);
-        */
-
+        }, 1500);
 
     }
 

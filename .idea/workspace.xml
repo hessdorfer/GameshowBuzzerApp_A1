@@ -45,14 +45,16 @@
       <file leaf-file-name="SinglePlayerMode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerMode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26041666">
-              <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5572917">
+              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1783#2096#0" expanded="true" />
                 <element signature="e#2095#2096#0" expanded="true" />
                 <element signature="e#2687#2887#0" expanded="true" />
                 <element signature="e#2886#2887#0" expanded="true" />
+                <element signature="e#3745#3908#0" expanded="true" />
+                <element signature="e#3907#3908#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1836,6 +1838,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1850,6 +1854,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1872,6 +1878,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1886,6 +1894,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1900,6 +1910,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1914,6 +1926,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1935,6 +1949,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1978,6 +1994,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2021,6 +2039,8 @@
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2240,14 +2260,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26041666">
-          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5572917">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1783#2096#0" expanded="true" />
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2687#2887#0" expanded="true" />
             <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#3745#3908#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
           </folding>
         </state>
       </provider>
