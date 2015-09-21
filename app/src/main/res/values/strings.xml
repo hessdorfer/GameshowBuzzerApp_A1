@@ -11,4 +11,6 @@
 
     <string name = "single_player_info">"Here's some information about being a single player."</string>
     <string name = "ok">"OK"</string>
+    <string name="title_activity_multi_player_mode">MultiPlayerMode</string>
+    <string name="title_activity_two_player">TwoPlayer</string>
 </resources>

@@ -45,4 +45,13 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    /* On Single Player Button Click */
+    public void openMultiPlayerMode(View view) {
+
+        // note: FromActivity.class, ToActivity.class
+        Intent intent = new Intent(this, MultiPlayerMode.class);
+        startActivity(intent);
+
+    }
 }

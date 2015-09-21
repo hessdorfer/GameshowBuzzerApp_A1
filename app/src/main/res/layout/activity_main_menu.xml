@@ -22,7 +22,8 @@
         android:id="@+id/button2"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="67dp" />
+        android:layout_marginTop="67dp"
+        android:onClick="openMultiPlayerMode"/>
 
     <Button
         android:layout_width="150dp"

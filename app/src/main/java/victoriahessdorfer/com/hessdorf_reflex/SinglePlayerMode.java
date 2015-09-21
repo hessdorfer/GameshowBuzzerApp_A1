@@ -1,22 +1,15 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.View;
 import android.widget.*;
 import android.graphics.Color;
-import java.util.Date;
-import android.content.Context;
-import android.content.DialogInterface.*;
+
 import java.util.Random;
-import android.R.drawable;
-import java.util.*;
-import java.util.TimerTask;
 
 /*
 * got Dialog help from http://www.androidhive.info/2011/09/how-to-show-alert-dialog-in-android/
@@ -78,9 +71,6 @@ public class SinglePlayerMode extends AppCompatActivity {
         final Button button = (Button) findViewById(R.id.click_quick_button);
         button.setTextColor(Color.BLACK);
 
-        // use timer and NOT SLEEP
-        // wait for timer to = this number so stuff can run in the background
-
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -94,25 +84,12 @@ public class SinglePlayerMode extends AppCompatActivity {
 
     protected void displayTimeTaken(long endTime){
 
-        /*
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-
         String string;
         if (endTime == -1) {
             string = "Too fast! Try again.";
         } else {
             string = "Your score was: " + (endTime - startTime) + " ms.";
-        }
-        textView.setText(string);
-        setContentView(textView);
-        */
-
-        String string;
-        if (endTime == -1) {
-            string = "Too fast! Try again.";
-        } else {
-            string = "Your score was: " + (endTime - startTime) + " ms.";
+            // enter this in some kind of database / table
         }
 
         final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
@@ -145,11 +122,7 @@ public class SinglePlayerMode extends AppCompatActivity {
             displayTimeTaken(endTime);
         }
     }
-
-
+    
 
 }
-
-
-
 

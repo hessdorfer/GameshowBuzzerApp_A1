@@ -24,6 +24,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="victoriahessdorfer.com.hessdorf_reflex.MainMenu" />
         </activity>
+        <activity
+            android:name=".MultiPlayerMode"
+            android:label="@string/title_activity_multi_player_mode" >
+        </activity>
+        <activity
+            android:name=".TwoPlayer"
+            android:label="@string/title_activity_two_player" >
+        </activity>
     </application>
 
 </manifest>
