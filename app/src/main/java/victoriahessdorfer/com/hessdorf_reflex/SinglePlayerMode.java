@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import android.graphics.Color;
@@ -25,7 +26,7 @@ import java.util.Random;
 
 public class SinglePlayerMode extends AppCompatActivity {
 
-    public long startTime;
+    protected long startTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +123,22 @@ public class SinglePlayerMode extends AppCompatActivity {
             displayTimeTaken(endTime);
         }
     }
-    
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 }
 
