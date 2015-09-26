@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="victoriahessdorfer.com.hessdorf_reflex.MultiPlayerMode"
+    >
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Two Players"
+        android:id="@+id/TwoPlayerButton"
+        android:layout_marginTop="97dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="chosenButton"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Three Players"
+        android:id="@+id/ThreePlayerButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="chosenButton"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Four Players"
+        android:id="@+id/FourPlayerButton"
+        android:layout_below="@+id/ThreePlayerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:onClick="chosenButton"/>
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How many players?"
+        android:textSize="40dp"
+        android:id="@+id/textViewMultiplayerMode"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
