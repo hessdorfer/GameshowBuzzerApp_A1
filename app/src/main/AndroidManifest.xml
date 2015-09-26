@@ -32,6 +32,14 @@
             android:name=".TwoPlayer"
             android:label="@string/title_activity_two_player" >
         </activity>
+        <activity
+            android:name=".ThreePlayer"
+            android:label="@string/title_activity_three_player" >
+        </activity>
+        <activity
+            android:name=".FourPlayer"
+            android:label="@string/title_activity_four_player" >
+        </activity>
     </application>
 
 </manifest>

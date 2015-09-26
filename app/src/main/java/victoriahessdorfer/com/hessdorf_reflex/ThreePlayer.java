@@ -1,21 +1,22 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
-
-public class TwoPlayer extends AppCompatActivity {
+public class ThreePlayer extends AppCompatActivity {
 
     protected long startTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_player);
+        setContentView(R.layout.activity_three_player);
 
     }
 
@@ -47,8 +48,4 @@ public class TwoPlayer extends AppCompatActivity {
 
 
     }
-
-
-
-
 }

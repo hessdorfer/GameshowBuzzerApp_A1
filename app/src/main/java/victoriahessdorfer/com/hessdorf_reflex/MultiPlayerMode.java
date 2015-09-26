@@ -26,12 +26,12 @@ public class MultiPlayerMode extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case "Three Players":
-                //intent = new Intent(this, MultiPlayerMode.class);
-                //startActivity(intent);
+                intent = new Intent(this, ThreePlayer.class);
+                startActivity(intent);
                 break;
             case "Four Players":
-                //intent = new Intent(this, MultiPlayerMode.class);
-                //startActivity(intent);
+                intent = new Intent(this, FourPlayer.class);
+                startActivity(intent);
                 break;
         }
 

@@ -18,4 +18,6 @@
     <string name="title_player_two">Player Two</string>
     <string name="title_player_three">Player Three</string>
     <string name="title_player_four">Player Four</string>
+    <string name="title_activity_three_player">ThreePlayer</string>
+    <string name="title_activity_four_player">FourPlayer</string>
 </resources>
