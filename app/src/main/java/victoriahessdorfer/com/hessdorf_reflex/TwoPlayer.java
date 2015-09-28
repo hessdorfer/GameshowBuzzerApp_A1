@@ -6,11 +6,18 @@ import android.os.Handler;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.content.Context;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.*;
 
 
 public class TwoPlayer extends AppCompatActivity {
 
     protected long startTime;
+    private static final String FILENAME = "test.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +30,13 @@ public class TwoPlayer extends AppCompatActivity {
         // I can't extend another class, so i'm creating an instance of my superclass
         // and calling its method.
 
-        //MultiPlayerSuper multiPlayerButton = new MultiPlayerSuper();
-        //multiPlayerButton.chosenButton(view);
-
         Button button = (Button) view;
         String string = (String) button.getText();
 
+        //saveInFile(string + ", " + this.getClass().getName());
         string = string + " won!";
+
+        //readFromFile();
 
         // record who won, and what mode it was in
 
@@ -46,6 +53,59 @@ public class TwoPlayer extends AppCompatActivity {
         }, 1500);
 
 
+    }
+
+    private void saveInFile(String text) {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
+
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+            Gson gson = new Gson();
+            gson.toJson(text, out);
+            fos.write(text.getBytes());
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    private void readFromFile(){
+        try {
+            FileInputStream fIn = new FileInputStream(FILENAME);
+            BufferedReader myReader = new BufferedReader(new InputStreamReader(fIn));
+            String aDataRow = "";
+            String aBuffer = ""; //Holds the text
+            while ((aDataRow = myReader.readLine()) != null) {
+                aBuffer += aDataRow;
+            }
+
+            final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
+            infoDialog.setMessage(aBuffer);
+            infoDialog.show();
+
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    infoDialog.dismiss();
+                }
+            }, 1500);
+
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        }
     }
 
 
