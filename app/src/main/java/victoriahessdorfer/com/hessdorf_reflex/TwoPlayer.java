@@ -6,20 +6,11 @@ import android.os.Handler;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
-import android.content.Context;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.util.ArrayList;
-
-import java.io.*;
 
 
 public class TwoPlayer extends AppCompatActivity {
 
     protected long startTime;
-    private static final String FILENAME = "file.sav";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +26,8 @@ public class TwoPlayer extends AppCompatActivity {
         Button button = (Button) view;
         String string = (String) button.getText();
 
-        saveInFile(string + ", " + this.getClass().getName());
+        DataRetention dataRetention = new DataRetention();
+        dataRetention.MultiPlayerSave(string, "Two Player Mode", getApplicationContext());
         string = string + " won!";
 
         // record who won, and what mode it was in
@@ -51,27 +43,6 @@ public class TwoPlayer extends AppCompatActivity {
                 infoDialog.dismiss();
             }
         }, 1500);
-
-
-    }
-
-    private void saveInFile(String text) {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME, 0);
-
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(text, out);
-            fos.write(text.getBytes());
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException(e);
-        }
 
 
     }
