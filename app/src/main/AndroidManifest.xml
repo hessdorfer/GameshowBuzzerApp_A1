@@ -40,6 +40,10 @@
             android:name=".FourPlayer"
             android:label="@string/title_activity_four_player" >
         </activity>
+        <activity
+            android:name=".StatsMode"
+            android:label="@string/title_activity_stats_mode" >
+        </activity>
     </application>
 
 </manifest>

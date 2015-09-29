@@ -11,13 +11,15 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.ArrayList;
+
 import java.io.*;
 
 
 public class TwoPlayer extends AppCompatActivity {
 
     protected long startTime;
-    private static final String FILENAME = "test.txt";
+    private static final String FILENAME = "file.sav";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +35,8 @@ public class TwoPlayer extends AppCompatActivity {
         Button button = (Button) view;
         String string = (String) button.getText();
 
-        //saveInFile(string + ", " + this.getClass().getName());
+        saveInFile(string + ", " + this.getClass().getName());
         string = string + " won!";
-
-        //readFromFile();
 
         // record who won, and what mode it was in
 
@@ -74,38 +74,6 @@ public class TwoPlayer extends AppCompatActivity {
         }
 
 
-    }
-
-    private void readFromFile(){
-        try {
-            FileInputStream fIn = new FileInputStream(FILENAME);
-            BufferedReader myReader = new BufferedReader(new InputStreamReader(fIn));
-            String aDataRow = "";
-            String aBuffer = ""; //Holds the text
-            while ((aDataRow = myReader.readLine()) != null) {
-                aBuffer += aDataRow;
-            }
-
-            final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
-            infoDialog.setMessage(aBuffer);
-            infoDialog.show();
-
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    infoDialog.dismiss();
-                }
-            }, 1500);
-
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException(e);
-        }
     }
 
 

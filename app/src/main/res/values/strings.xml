@@ -20,4 +20,5 @@
     <string name="title_player_four">Player Four</string>
     <string name="title_activity_three_player">ThreePlayer</string>
     <string name="title_activity_four_player">FourPlayer</string>
+    <string name="title_activity_stats_mode">StatsMode</string>
 </resources>
