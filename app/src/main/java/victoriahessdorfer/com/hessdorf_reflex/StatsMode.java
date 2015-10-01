@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class StatsMode extends AppCompatActivity {
 
     @Override
@@ -21,7 +23,15 @@ public class StatsMode extends AppCompatActivity {
         String string;
 
         DataRetention dataRetention = new DataRetention();
-        string = dataRetention.MultiPlayerReadData(getApplicationContext());
+        ArrayList<DataRetention.MultiPlayerObj> multiObj = new ArrayList<DataRetention.MultiPlayerObj>();
+        multiObj = dataRetention.MultiPlayerReadData(getApplicationContext());
+
+        string = "";
+        for (int i = 0; i < multiObj.size(); i++) {
+            string = "mode: " + multiObj.get(i).mode + " winner: " + multiObj.get(i).winner ;
+            if (multiObj.size() != i - 2 )
+                string = string + " */ ";
+        }
 
         final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
         infoDialog.setMessage(string);
