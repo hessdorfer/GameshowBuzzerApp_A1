@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Serializable;
+import java.util.Scanner;
 
 
 import android.content.Context;
@@ -25,23 +26,15 @@ import java.util.ArrayList;
  * http://stackoverflow.com/questions/6484428/java-read-object-input-stream-into-arraylist
  */
 
-public class DataRetention {
+public class DataRetention implements Serializable {
 
-   private static final String MultiPlayerFilename = "MultiPlayer.ser";
+   private static final String MultiPlayerFilename = "MultiPlayer.sav";
    private static final String SinglePlayerFilename = "SinglePlayer.sav";
 
 
     public class MultiPlayerObj implements java.io.Serializable {
-        private String winner;
-        private String mode;
-
-        public void setWinner(String inp){
-            this.winner = inp;
-        }
-
-        public void setMode(String inp){
-           this.mode = inp;
-        }
+        public String winner;
+        public String mode;
     }
 
     public void SinglePlayerSave(String text, Context context) {
@@ -67,25 +60,13 @@ public class DataRetention {
 
 
         MultiPlayerObj obj = new MultiPlayerObj();
-        obj.setWinner("test1");
-        obj.setMode("test1");
+        obj.winner = winner;
+        obj.mode = mode;
 
         try {
-            /*
-            FileOutputStream fos = context.openFileOutput(MultiPlayerFilename, context.MODE_APPEND);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-
-            oos.writeObject(obj);
-
-            oos.close();
-            fos.close();
-            */
 
 
             FileOutputStream fileOut = context.openFileOutput(MultiPlayerFilename, context.MODE_APPEND);
-
-            //String filePath = context.getFilesDir().getPath().toString() + "/" + MultiPlayerFilename;
-            //FileOutputStream fileOut = new FileOutputStream(filePath, Boolean.TRUE);
 
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
@@ -129,58 +110,40 @@ public class DataRetention {
     }
 
 
-
-    public ArrayList<MultiPlayerObj> MultiPlayerReadData2(Context context) {
-
-        ArrayList<MultiPlayerObj> multiObj = new ArrayList<MultiPlayerObj>();
-
-        try {
-            FileInputStream fis = context.openFileInput(MultiPlayerFilename);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            String line = in.readLine();
-
-            JsonParser parser = new JsonParser();
-
-            Gson gson = new Gson();
-            JsonReader reader = new JsonReader(new StringReader(line));
-            reader.setLenient(true);
-
-            JsonArray jArray = parser.parse(reader).getAsJsonArray();
-
-            for(JsonElement obj : jArray )
-            {
-                MultiPlayerObj mobj = gson.fromJson( obj , MultiPlayerObj.class);
-                multiObj.add(mobj);
-            }
-
-
-        } catch (FileNotFoundException e) {
-            // DO SOMETHING HERE - see lonelyTwitter
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return multiObj;
-
-    }
-
     public ArrayList<MultiPlayerObj> MultiPlayerReadData(Context context) {
 
         ArrayList<MultiPlayerObj> multiObj = new ArrayList<MultiPlayerObj>();
+        //MultiPlayerObj object;
+
 
         try {
-            ObjectInputStream objInput = new ObjectInputStream(new FileInputStream(MultiPlayerFilename));
-            Object object = objInput.readObject();
+                String filePath = context.getFilesDir().getPath().toString() + "/" + MultiPlayerFilename;
+                File file=new File(filePath);
+                Boolean b = file.exists();
+                System.out.println(file.exists());
+                Scanner scan =new Scanner(file);
+
+
+
+            FileInputStream fileIn = new FileInputStream(file);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Object object;
+            object = in.readObject();
             while (object != null) {
                 multiObj.add((MultiPlayerObj) object);
-                object = objInput.readObject();
+                object = in.readObject();
+
+                if (object != null) b = Boolean.TRUE;
             }
-            objInput.close();
+            in.close();
+            fileIn.close();
         } catch(Exception e) {
             // everything else
+            e.printStackTrace();
         }
 
         return multiObj;
+
 
     }
 

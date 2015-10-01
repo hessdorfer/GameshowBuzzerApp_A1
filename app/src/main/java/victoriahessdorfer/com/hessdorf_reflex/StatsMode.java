@@ -27,11 +27,13 @@ public class StatsMode extends AppCompatActivity {
         multiObj = dataRetention.MultiPlayerReadData(getApplicationContext());
 
         string = "";
+
         for (int i = 0; i < multiObj.size(); i++) {
             string = "mode: " + multiObj.get(i).mode + " winner: " + multiObj.get(i).winner ;
             if (multiObj.size() != i - 2 )
-                string = string + " */ ";
+                string = string + " ** ";
         }
+
 
         final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
         infoDialog.setMessage(string);
