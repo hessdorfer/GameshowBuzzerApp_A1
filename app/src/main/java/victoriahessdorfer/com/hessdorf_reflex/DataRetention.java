@@ -71,9 +71,11 @@ public class DataRetention implements Serializable {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
             out.writeObject(obj);
+            out.flush();
+            fileOut.flush();
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved in /tmp/employee.ser");
+
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -113,37 +115,27 @@ public class DataRetention implements Serializable {
     public ArrayList<MultiPlayerObj> MultiPlayerReadData(Context context) {
 
         ArrayList<MultiPlayerObj> multiObj = new ArrayList<MultiPlayerObj>();
-        //MultiPlayerObj object;
-
 
         try {
                 String filePath = context.getFilesDir().getPath().toString() + "/" + MultiPlayerFilename;
                 File file=new File(filePath);
-                Boolean b = file.exists();
-                System.out.println(file.exists());
-                Scanner scan =new Scanner(file);
 
-
-
-            FileInputStream fileIn = new FileInputStream(file);
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            Object object;
-            object = in.readObject();
-            while (object != null) {
-                multiObj.add((MultiPlayerObj) object);
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                Object object;
                 object = in.readObject();
-
-                if (object != null) b = Boolean.TRUE;
+                while (object != null) {
+                    multiObj.add((MultiPlayerObj) object);
+                    object = in.readObject();
+                }
+                in.close();
+                fileIn.close();
+            } catch(Exception e) {
+                // everything else
+                e.printStackTrace();
             }
-            in.close();
-            fileIn.close();
-        } catch(Exception e) {
-            // everything else
-            e.printStackTrace();
-        }
 
-        return multiObj;
-
+            return multiObj;
 
     }
 
