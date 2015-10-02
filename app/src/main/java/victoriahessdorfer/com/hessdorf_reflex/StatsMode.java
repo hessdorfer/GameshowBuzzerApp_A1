@@ -16,7 +16,6 @@ public class StatsMode extends AppCompatActivity {
         setContentView(R.layout.activity_stats_mode);
 
         fillTable();
-
     }
 
 
@@ -24,13 +23,14 @@ public class StatsMode extends AppCompatActivity {
         String string;
         String string2;
 
+        /*
         DataRetention dataRetention = new DataRetention();
         ArrayList<DataRetention.MultiPlayerObj> multiObj =  dataRetention.gsonRead(getApplicationContext());
 
         string = "";
 
         for (int i = 0; i < multiObj.size(); i++) {
-            string2 = "mode: " + multiObj.get(i).mode + " winner: " + multiObj.get(i).winner ;
+            string2 = "winner: " + multiObj.get(i).winner ;
             string = string + string2 + " // ";
         }
 
@@ -46,6 +46,8 @@ public class StatsMode extends AppCompatActivity {
                 infoDialog.dismiss();
             }
         }, 10000);
+
+        */
 
     }
 
