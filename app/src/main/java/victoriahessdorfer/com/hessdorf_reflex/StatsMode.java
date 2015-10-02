@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import android.content.Context;
 
 public class StatsMode extends AppCompatActivity {
 
@@ -21,17 +22,16 @@ public class StatsMode extends AppCompatActivity {
 
     private void fillTable(){
         String string;
+        String string2;
 
         DataRetention dataRetention = new DataRetention();
-        ArrayList<DataRetention.MultiPlayerObj> multiObj = new ArrayList<DataRetention.MultiPlayerObj>();
-        multiObj = dataRetention.MultiPlayerReadData(getApplicationContext());
+        ArrayList<DataRetention.MultiPlayerObj> multiObj =  dataRetention.gsonRead(getApplicationContext());
 
         string = "";
 
         for (int i = 0; i < multiObj.size(); i++) {
-            string = "mode: " + multiObj.get(i).mode + " winner: " + multiObj.get(i).winner ;
-            if (multiObj.size() != i - 2 )
-                string = string + " ** ";
+            string2 = "mode: " + multiObj.get(i).mode + " winner: " + multiObj.get(i).winner ;
+            string = string + string2 + " // ";
         }
 
 

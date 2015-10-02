@@ -28,16 +28,74 @@ import java.util.ArrayList;
 
 public class DataRetention implements Serializable {
 
-   private static final String MultiPlayerFilename = "MultiPlayer.sav";
-   private static final String SinglePlayerFilename = "SinglePlayer.sav";
+    private static final String MultiPlayerFilename = "MultiPlayer1.sav";
+    private static final String SinglePlayerFilename = "SinglePlayer1.sav";
+
+    private ArrayList<MultiPlayerObj> multiPlayerObject;
 
 
-    public class MultiPlayerObj implements java.io.Serializable {
+    public class MultiPlayerObj {
         public String winner;
         public String mode;
     }
 
+    public void gsonAdd(String winner, String mode, Context context){
+
+        MultiPlayerObj obj = new MultiPlayerObj();
+        obj.winner = winner;
+        obj.mode = mode;
+
+        multiPlayerObject = gsonRead(context);
+
+        try {
+            multiPlayerObject.add(obj);
+            gsonSave(context);
+        } catch (Exception e){
+            multiPlayerObject = new ArrayList<MultiPlayerObj>();
+            multiPlayerObject.add(obj);
+            gsonSave(context);
+        }
+
+    }
+
+    public void gsonSave(Context context) {
+        // single player
+        try {
+            FileOutputStream fos = context.openFileOutput(MultiPlayerFilename, 0);
+
+            OutputStreamWriter out = new OutputStreamWriter(fos);
+            Gson gson = new Gson();
+
+            gson.toJson(multiPlayerObject, out);
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<MultiPlayerObj> gsonRead(Context context) {
+        // single player
+        try {
+            FileInputStream fis = context.openFileInput(MultiPlayerFilename);
+            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+            Gson gson = new Gson();
+            Type listType = new TypeToken<ArrayList<MultiPlayerObj>>() {}.getType();
+            multiPlayerObject = gson.fromJson(in, listType);
+        } catch (FileNotFoundException e) {
+            multiPlayerObject = new ArrayList<MultiPlayerObj>();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return multiPlayerObject;
+    }
+
+
     public void SinglePlayerSave(String text, Context context) {
+
         try {
             FileOutputStream fos = context.openFileOutput(SinglePlayerFilename, 0);
 
@@ -57,6 +115,8 @@ public class DataRetention implements Serializable {
     }
 
     public void MultiPlayerSave(String winner, String mode, Context context){
+
+        // just save as one big string? Android API save to internal file
 
 
         MultiPlayerObj obj = new MultiPlayerObj();
