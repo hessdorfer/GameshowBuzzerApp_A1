@@ -2,15 +2,12 @@ package victoriahessdorfer.com.hessdorf_reflex;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.*;
 
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Serializable;
-import java.util.Scanner;
 
 
 import android.content.Context;
@@ -51,12 +48,16 @@ public class DataRetention implements Serializable {
         switch(saveType){
             case "SinglePlayer":
                 fileName = SinglePlayerFilename;
+                break;
             case "TwoPlayer":
                 fileName = TwoPlayerFilename;
+                break;
             case "ThreePlayer":
                 fileName = ThreePlayerFilename;
+                break;
             case "FourPlayer":
                 fileName = FourPlayerFilename;
+                break;
         }
 
         return fileName;
@@ -74,11 +75,11 @@ public class DataRetention implements Serializable {
 
         try {
             multiPlayerObject.add(obj);
-            gsonSave(context, "MultiPlayer");
+            gsonSave(context, saveType);
         } catch (Exception e){
             multiPlayerObject = new ArrayList<MultiPlayerObj>();
             multiPlayerObject.add(obj);
-            gsonSave(context, "MultiPlayer");
+            gsonSave(context, saveType);
         }
 
     }
@@ -157,7 +158,7 @@ public class DataRetention implements Serializable {
         return singlePlayerObject;
     }
 
-    public void gsonClear(Context context, String FILENAME, String saveType) {
+    public void gsonClear(Context context, String saveType) {
 
         if (saveType == "SinglePlayer"){
             singlePlayerObject = new ArrayList<>();
