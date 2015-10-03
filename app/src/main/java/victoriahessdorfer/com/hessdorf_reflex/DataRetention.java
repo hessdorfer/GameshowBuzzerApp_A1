@@ -41,47 +41,70 @@ public class DataRetention implements Serializable {
     }
 
     public class SinglePlayerObj {
-        public int reactionTime;
+        public long reactionTime;
     }
 
-    public void gsonAddMultiPlayer(String winner, Context context, String FILENAME){
+    public String getFileName(String saveType){
+
+        String fileName = "";
+
+        switch(saveType){
+            case "SinglePlayer":
+                fileName = SinglePlayerFilename;
+            case "TwoPlayer":
+                fileName = TwoPlayerFilename;
+            case "ThreePlayer":
+                fileName = ThreePlayerFilename;
+            case "FourPlayer":
+                fileName = FourPlayerFilename;
+        }
+
+        return fileName;
+
+    }
+
+    public void gsonAddMultiPlayer(String winner, Context context, String saveType){
 
         MultiPlayerObj obj = new MultiPlayerObj();
         obj.winner = winner;
+
+        String FILENAME = getFileName(saveType);
 
         multiPlayerObject = gsonReadMultiPlayer(context, FILENAME);
 
         try {
             multiPlayerObject.add(obj);
-            gsonSave(context, FILENAME, "MultiPlayer");
+            gsonSave(context, "MultiPlayer");
         } catch (Exception e){
             multiPlayerObject = new ArrayList<MultiPlayerObj>();
             multiPlayerObject.add(obj);
-            gsonSave(context, FILENAME, "MultiPlayer");
+            gsonSave(context, "MultiPlayer");
         }
 
     }
 
-    public void gsonAddSinglePlayer(int time, Context context, String FILENAME){
+    public void gsonAddSinglePlayer(long time, Context context){
 
         SinglePlayerObj obj = new SinglePlayerObj();
         obj.reactionTime = time;
 
-        singlePlayerObject = gsonReadSinglePlayer(context, FILENAME);
+        singlePlayerObject = gsonReadSinglePlayer(context);
 
         try {
             singlePlayerObject.add(obj);
-            gsonSave(context, FILENAME, "MultiPlayer");
+            gsonSave(context, "SinglePlayer");
         } catch (Exception e){
             singlePlayerObject = new ArrayList<SinglePlayerObj>();
             singlePlayerObject.add(obj);
-            gsonSave(context, FILENAME, "MultiPlayer");
+            gsonSave(context, "SinglePlayer");
         }
 
     }
 
-    public void gsonSave(Context context, String FILENAME, String saveType) {
-        // single player
+    public void gsonSave(Context context, String saveType) {
+
+        String FILENAME = getFileName(saveType);
+
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, 0);
 
@@ -119,10 +142,10 @@ public class DataRetention implements Serializable {
         return multiPlayerObject;
     }
 
-    public ArrayList<SinglePlayerObj> gsonReadSinglePlayer(Context context, String FILENAME) {
+    public ArrayList<SinglePlayerObj> gsonReadSinglePlayer(Context context) {
         // single player
         try {
-            FileInputStream fis = context.openFileInput(FILENAME);
+            FileInputStream fis = context.openFileInput(SinglePlayerFilename);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<SinglePlayerObj>>() {}.getType();
@@ -141,7 +164,7 @@ public class DataRetention implements Serializable {
         } else {
             multiPlayerObject = new ArrayList<>();
         }
-        gsonSave(context, FILENAME, saveType);
+        gsonSave(context, saveType);
 
     }
 

@@ -30,6 +30,8 @@ public class FourPlayer extends AppCompatActivity {
         Button button = (Button) view;
         String string = (String) button.getText();
 
+        DataRetention dataRetention = new DataRetention();
+        dataRetention.gsonAddMultiPlayer(string, getApplicationContext(), "TwoPlayer");
         string = string + " won!";
 
         // record who won, and what mode it was in

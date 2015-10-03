@@ -27,7 +27,7 @@ public class TwoPlayer extends AppCompatActivity {
         String string = (String) button.getText();
 
         DataRetention dataRetention = new DataRetention();
-        dataRetention.gsonAddMultiPlayer(string, getApplicationContext(), "TwoPlayer.sav");
+        dataRetention.gsonAddMultiPlayer(string, getApplicationContext(), "TwoPlayer");
         string = string + " won!";
 
         // record who won, and what mode it was in

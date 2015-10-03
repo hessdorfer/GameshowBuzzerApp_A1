@@ -90,7 +90,8 @@ public class SinglePlayerMode extends AppCompatActivity {
             string = "Too fast! Try again.";
         } else {
             string = "Your score was: " + (endTime - startTime) + " ms.";
-            // enter this in some kind of database / table
+            DataRetention dataRetention = new DataRetention();
+            dataRetention.gsonAddSinglePlayer(endTime - startTime, getApplicationContext());
         }
 
         final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
