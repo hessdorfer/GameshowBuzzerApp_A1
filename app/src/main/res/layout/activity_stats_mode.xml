@@ -4,14 +4,50 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="victoriahessdorfer.com.hessdorf_reflex.StatsMode">
+    tools:context="victoriahessdorfer.com.hessdorf_reflex.StatsMode"
+    android:scrollIndicators="bottom">
 
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="62dp" />
+        android:layout_marginTop="39dp"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:id="@+id/gridView"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="Cell 0"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 1"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 2"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 3"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 4"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 5"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 6"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 7"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 8"
+            android:textSize="14dip" />
+        <TextView
+            android:text="Cell 9"
+            android:textSize="14dip" />
+
+    </GridLayout>
 </RelativeLayout>

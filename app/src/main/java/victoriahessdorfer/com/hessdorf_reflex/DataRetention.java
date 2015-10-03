@@ -39,6 +39,7 @@ public class DataRetention implements Serializable {
 
     public class SinglePlayerObj {
         public long reactionTime;
+
     }
 
     public String getFileName(String saveType){
@@ -126,8 +127,10 @@ public class DataRetention implements Serializable {
         }
     }
 
-    public ArrayList<MultiPlayerObj> gsonReadMultiPlayer(Context context, String FILENAME) {
-        // single player
+    public ArrayList<MultiPlayerObj> gsonReadMultiPlayer(Context context, String saveType) {
+
+        String FILENAME = getFileName(saveType);
+
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -144,7 +147,7 @@ public class DataRetention implements Serializable {
     }
 
     public ArrayList<SinglePlayerObj> gsonReadSinglePlayer(Context context) {
-        // single player
+
         try {
             FileInputStream fis = context.openFileInput(SinglePlayerFilename);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
