@@ -1,6 +1,8 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -105,6 +107,43 @@ public class StatsMode extends AppCompatActivity {
 
     }
 
+    public String parseDataAsString(){
+
+        String s = "";
+
+        StatisticsManager stats = new StatisticsManager();
+
+        StatisticsManager.Combined combined = stats.getAll(getApplicationContext());
+
+        s = s + ">>Reaction Time \n >All Values: \n";
+
+        s = s + "Minimum: " + combined.min.overall + ", Maximum: " + combined.max.overall + "\n";
+        s = s + "Average: " + combined.average.overall + ", Median: " + combined.median.overall + "\n";
+
+        s = s + ">Last 10 Values: \n";
+
+        s = s + "Minimum: " + combined.min.last10 + ", Maximum: " + combined.max.last10 + "\n";
+        s = s + "Average: " + combined.average.last10 + ", Median: " + combined.median.last10 + "\n";
+
+
+        s = s + ">Last 100 Values: \n";
+
+        s = s + "Minimum: " + combined.min.last100 + ", Maximum: " + combined.max.last100 + "\n";
+        s = s + "Average: " + combined.average.last100 + ", Median: " + combined.median.last100 + "\n";
+
+        s = s + ">>Buzzer Presses: \n";
+
+        s = s + ">Two Player: \n P1: " + combined.twoPlayer.p1 + ", P2: " + combined.twoPlayer.p2 + "\n";
+
+        s = s + ">Three Player: \n P1: " + combined.threePlayer.p1 + ", P2: " + combined.threePlayer.p2 +
+                ", P3: " + combined.threePlayer.p3 + "\n";
+
+        s = s + ">Four Player: \n P1: " + combined.fourPlayer.p1 + ", P2: " + combined.fourPlayer.p2 +
+                ", P3: " + combined.fourPlayer.p3 + ", P4: " + combined.fourPlayer.p4 + "\n";
+
+        return s;
+    }
+
     public void clearTable(View view) {
 
         DataRetention d = new DataRetention();
@@ -114,7 +153,8 @@ public class StatsMode extends AppCompatActivity {
 
     public void createEmail(View view){
         EmailHandler h = new EmailHandler();
-        h.composeEmail("hessdorf@ualberta.ca", getApplicationContext());
+        String bodyString = parseDataAsString();
+        h.composeEmail(view, bodyString);
 
 
     }

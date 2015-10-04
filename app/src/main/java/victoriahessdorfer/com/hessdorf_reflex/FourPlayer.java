@@ -24,9 +24,6 @@ public class FourPlayer extends AppCompatActivity {
         // I can't extend another class, so i'm creating an instance of my superclass
         // and calling its method.
 
-        //MultiPlayerSuper multiPlayerButton = new MultiPlayerSuper();
-        //multiPlayerButton.chosenButton(view);
-
         Button button = (Button) view;
         String string = (String) button.getText();
 
