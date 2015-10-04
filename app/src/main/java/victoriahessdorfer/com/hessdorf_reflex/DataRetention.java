@@ -70,9 +70,7 @@ public class DataRetention implements Serializable {
         MultiPlayerObj obj = new MultiPlayerObj();
         obj.winner = winner;
 
-        String FILENAME = getFileName(saveType);
-
-        multiPlayerObject = gsonReadMultiPlayer(context, FILENAME);
+        multiPlayerObject = gsonReadMultiPlayer(context, saveType);
 
         try {
             multiPlayerObject.add(obj);
@@ -161,19 +159,25 @@ public class DataRetention implements Serializable {
         return singlePlayerObject;
     }
 
-    public void gsonClear(Context context, String saveType) {
+    public void gsonClear(Context context) {
 
-        if (saveType == "SinglePlayer"){
-            singlePlayerObject = new ArrayList<>();
-        } else {
-            multiPlayerObject = new ArrayList<>();
-        }
-        gsonSave(context, saveType);
+        singlePlayerObject = new ArrayList<>();
+        gsonSave(context, "SinglePlayer");
+        multiPlayerObject = new ArrayList<>();
+        gsonSave(context, "TwoPlayer");
+        gsonSave(context, "ThreePlayer");
+        gsonSave(context, "FourPlayer");
 
     }
 
     public SinglePlayerObj returnSinglePlayerObj(){
         return new SinglePlayerObj();
+    }
+
+    public SinglePlayerObj returnSinglePlayerObj(long reactionTime){
+        SinglePlayerObj s = new SinglePlayerObj();
+        s.reactionTime = reactionTime;
+        return s;
     }
 
     public ArrayList<SinglePlayerObj> returnSinglePlayerArray(){

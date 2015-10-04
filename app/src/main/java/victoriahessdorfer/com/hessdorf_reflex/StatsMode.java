@@ -1,7 +1,9 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import java.util.Objects;
 
@@ -66,19 +68,48 @@ public class StatsMode extends AppCompatActivity {
         mTextView = (TextView) findViewById(R.id.P19);
         mTextView.setText(Long.toString(combined.median.last100));
 
-        /*
-        public class Combined
-            Min min;
-            Max max;
-            Average average;
-            Median median;
-            TwoPlayer twoPlayer;
-            ThreePlayer threePlayer;
-            FourPlayer fourPlayer;
-        }
-        */
+        // Two Player
+
+        mTextView = (TextView) findViewById(R.id.P26);
+        mTextView.setText(Long.toString(combined.twoPlayer.p1));
+
+        mTextView = (TextView) findViewById(R.id.P27);
+        mTextView.setText(Long.toString(combined.twoPlayer.p2));
+
+        // Three Player
+
+        mTextView = (TextView) findViewById(R.id.P31);
+        mTextView.setText(Long.toString(combined.threePlayer.p1));
+
+        mTextView = (TextView) findViewById(R.id.P32);
+        mTextView.setText(Long.toString(combined.threePlayer.p2));
+
+        mTextView = (TextView) findViewById(R.id.P33);
+        mTextView.setText(Long.toString(combined.threePlayer.p3));
+
+        // Four Player
+
+        mTextView = (TextView) findViewById(R.id.P36);
+        mTextView.setText(Long.toString(combined.fourPlayer.p1));
+
+        mTextView = (TextView) findViewById(R.id.P37);
+        mTextView.setText(Long.toString(combined.fourPlayer.p2));
+
+        mTextView = (TextView) findViewById(R.id.P38);
+        mTextView.setText(Long.toString(combined.fourPlayer.p3));
+
+        mTextView = (TextView) findViewById(R.id.P39);
+        mTextView.setText(Long.toString(combined.fourPlayer.p4));
 
 
+
+    }
+
+    public void clearTable(View view) {
+
+        DataRetention d = new DataRetention();
+        d.gsonClear(getApplicationContext());
+        fillTable();
     }
 
 

@@ -72,14 +72,36 @@ public class StatisticsManager {
 
         Combined combined = new Combined();
 
-        combined.min = getMin();
-        combined.max = getMax();
-        combined.average = getAverage();
-        combined.median = getMedian();
 
-        combined.twoPlayer = getTwoPlayerStats();
-        combined.threePlayer = getThreePlayerStats();
-        combined.fourPlayer = getFourPlayerStats();
+        if (arrayALL.size() != 0) {
+            combined.min = getMin();
+            combined.max = getMax();
+            combined.average = getAverage();
+            combined.median = getMedian();
+        } else {
+            combined.min = new Min();
+            combined.max = new Max();
+            combined.average = new Average();
+            combined.median = new Median();
+        }
+
+        if (twoPlayerArray.size() != 0) {
+            combined.twoPlayer = getTwoPlayerStats();
+        } else {
+            combined.twoPlayer = new TwoPlayer();
+        }
+
+        if (threePlayerArray.size() != 0) {
+            combined.threePlayer = getThreePlayerStats();
+        } else {
+            combined.threePlayer = new ThreePlayer();
+        }
+
+        if (fourPlayerArray.size() != 0) {
+            combined.fourPlayer = getFourPlayerStats();
+        } else {
+            combined.fourPlayer = new FourPlayer();
+        }
 
         return combined;
 
@@ -98,6 +120,7 @@ public class StatisticsManager {
         int i = 0;
         int max = arrayALL.size();
         while (i < max & i < 10) {
+            singlePlayerObj = d.returnSinglePlayerObj();
             singlePlayerObj.reactionTime = arrayALL.get(max - i - 1).reactionTime;
             arrayLast10.add(singlePlayerObj);
             i++;
@@ -106,11 +129,11 @@ public class StatisticsManager {
         // grab array list of last 100 entries
         i = 0;
         while (i < max & i < 100) {
+            singlePlayerObj = d.returnSinglePlayerObj();
             singlePlayerObj.reactionTime = arrayALL.get(max - i - 1).reactionTime;
             arrayLast100.add(singlePlayerObj);
             i++;
         }
-
 
         twoPlayerArray = d.gsonReadMultiPlayer(context, "TwoPlayer");
         threePlayerArray = d.gsonReadMultiPlayer(context, "ThreePlayer");
@@ -148,8 +171,8 @@ public class StatisticsManager {
         i = 1;
         min.last100 = arrayLast100.get(0).reactionTime;
         while (i < arrayLast100.size()) {
-            if (min.last10 > arrayLast100.get(i).reactionTime) {
-                min.last10 = arrayLast100.get(i).reactionTime;
+            if (min.last100 > arrayLast100.get(i).reactionTime) {
+                min.last100 = arrayLast100.get(i).reactionTime;
             }
             i++;
         }
@@ -186,8 +209,8 @@ public class StatisticsManager {
         i = 1;
         max.last100 = arrayLast100.get(0).reactionTime;
         while (i < arrayLast100.size()) {
-            if (max.last10 < arrayLast100.get(i).reactionTime) {
-                max.last10 = arrayLast100.get(i).reactionTime;
+            if (max.last100 < arrayLast100.get(i).reactionTime) {
+                max.last100 = arrayLast100.get(i).reactionTime;
             }
             i++;
         }

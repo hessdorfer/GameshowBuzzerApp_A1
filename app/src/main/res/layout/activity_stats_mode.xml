@@ -9,10 +9,7 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp"
+        android:layout_height="wrap_content"
         android:rowCount="5"
         android:columnCount="4"
         android:id="@+id/gridView"
@@ -22,87 +19,216 @@
         android:useDefaultMargins="true"
         android:touchscreenBlocksFocus="false"
         android:nestedScrollingEnabled="false"
-        android:longClickable="false">
+        android:longClickable="false"
+        android:layout_above="@+id/textViewBuzzer"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentEnd="false">
         <TextView
             android:text=" "
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P0"/>
         <TextView
             android:text="All Records"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P1"/>
         <TextView
             android:text="Last 10"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P2"/>
         <TextView
             android:text="Last 100"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P3"/>
         <TextView
             android:text="Minimum"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P4"/>
         <TextView
             android:text="Cell 5"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P5"/>
         <TextView
             android:text="Cell 6"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P6"/>
         <TextView
             android:text="Cell 7"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P7"/>
         <TextView
             android:text="Maximum"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P8" />
         <TextView
             android:text="Cell 9"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P9"/>
         <TextView
             android:text="Cell 10"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P10"/>
         <TextView
             android:text="Cell 11"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P11"/>
         <TextView
             android:text="Average"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P12"/>
         <TextView
             android:text="Cell 13"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P13"/>
         <TextView
             android:text="Cell 14"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P14"/>
         <TextView
             android:text="Cell 15"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P15"/>
         <TextView
             android:text="Median"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P16"/>
         <TextView
             android:text="Cell 17"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P17"/>
         <TextView
             android:text="Cell 18"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P18"/>
         <TextView
             android:text="Cell 19"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:id="@+id/P19"/>
 
     </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="5"
+        android:useDefaultMargins="true"
+        android:id="@+id/gridView3"
+        android:layout_above="@+id/clearStatsButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:text=" "
+            android:textSize="13sp"
+            android:id="@+id/P20"/>
+        <TextView
+            android:text="Player 1"
+            android:textSize="13sp"
+            android:id="@+id/P21"/>
+        <TextView
+            android:text="Player 2"
+            android:textSize="13sp"
+            android:id="@+id/P22"/>
+        <TextView
+            android:text="Player 3"
+            android:textSize="13sp"
+            android:id="@+id/P23"/>
+        <TextView
+            android:text="Player 4"
+            android:textSize="13sp"
+            android:id="@+id/P24"/>
+        <TextView
+            android:text="Two Player"
+            android:textSize="13sp"
+            android:id="@+id/P25"/>
+        <TextView
+            android:text="Cell 26"
+            android:textSize="17sp"
+            android:id="@+id/P26"/>
+        <TextView
+            android:text="Cell 27"
+            android:textSize="17sp"
+            android:id="@+id/P27"/>
+        <TextView
+            android:text=" "
+            android:textSize="17sp"
+            android:id="@+id/P28"/>
+        <TextView
+            android:text=" "
+            android:textSize="17sp"
+            android:id="@+id/P29"/>
+        <TextView
+            android:text="Three Player"
+            android:textSize="13sp"
+            android:id="@+id/P30"/>
+        <TextView
+            android:text="Cell 31"
+            android:textSize="17sp"
+            android:id="@+id/P31"/>
+        <TextView
+            android:text="Cell 32"
+            android:textSize="17sp"
+            android:id="@+id/P32"/>
+        <TextView
+            android:text="Cell 33"
+            android:textSize="17sp"
+            android:id="@+id/P33"/>
+        <TextView
+            android:text=" "
+            android:textSize="17sp"
+            android:id="@+id/P34"/>
+        <TextView
+            android:text="Four Player"
+            android:textSize="13sp"
+            android:id="@+id/P35"/>
+        <TextView
+            android:text="Cell 36"
+            android:textSize="17sp"
+            android:id="@+id/P36"/>
+        <TextView
+            android:text="Cell 37"
+            android:textSize="17sp"
+            android:id="@+id/P37"/>
+        <TextView
+            android:text="Cell 38"
+            android:textSize="17sp"
+            android:id="@+id/P38"/>
+        <TextView
+            android:text="Cell 39"
+            android:textSize="17sp"
+            android:id="@+id/P39"/>
+
+
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Stats"
+        android:id="@+id/clearStatsButton"
+        android:onClick="clearTable"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buzzer Counts"
+        android:textSize="27sp"
+        android:id="@+id/textViewBuzzer"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reaction Times"
+        android:textSize="27sp"
+        android:id="@+id/textViewReaction"
+        android:layout_above="@+id/gridView"
+        android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>
