@@ -65,9 +65,9 @@ public class StatisticsManager {
         FourPlayer fourPlayer;
     }
 
-    public Combined getAll(Context context, String saveType){
+    public Combined getAll(Context context){
 
-        fillArrays(context, saveType);
+        fillArrays(context);
 
         Combined combined = new Combined();
 
@@ -84,7 +84,7 @@ public class StatisticsManager {
 
     }
 
-    public void fillArrays(Context context, String saveType){
+    public void fillArrays(Context context){
 
         DataRetention d = new DataRetention();
         arrayALL = d.gsonReadSinglePlayer(context);

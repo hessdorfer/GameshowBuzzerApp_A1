@@ -1,12 +1,9 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
-import android.app.AlertDialog;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import java.util.ArrayList;
-import android.content.Context;
+import android.widget.TextView;
+import java.util.Objects;
 
 public class StatsMode extends AppCompatActivity {
 
@@ -20,34 +17,27 @@ public class StatsMode extends AppCompatActivity {
 
 
     private void fillTable(){
-        String string;
-        String string2;
+
+        StatisticsManager stats = new StatisticsManager();
+
+
+        StatisticsManager.Combined combined = stats.getAll(getApplicationContext());
+
+        final TextView mTextView = (TextView) findViewById(R.id.P5);
+        mTextView.setText(Long.toString(combined.min.overall));
 
         /*
-        DataRetention dataRetention = new DataRetention();
-        ArrayList<DataRetention.MultiPlayerObj> multiObj =  dataRetention.gsonRead(getApplicationContext());
-
-        string = "";
-
-        for (int i = 0; i < multiObj.size(); i++) {
-            string2 = "winner: " + multiObj.get(i).winner ;
-            string = string + string2 + " // ";
+        public class Combined
+            Min min;
+            Max max;
+            Average average;
+            Median median;
+            TwoPlayer twoPlayer;
+            ThreePlayer threePlayer;
+            FourPlayer fourPlayer;
         }
-
-
-        final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
-        infoDialog.setMessage(string);
-        infoDialog.show();
-
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                infoDialog.dismiss();
-            }
-        }, 10000);
-
         */
+
 
     }
 

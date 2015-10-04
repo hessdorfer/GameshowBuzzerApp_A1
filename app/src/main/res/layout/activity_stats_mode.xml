@@ -17,37 +17,92 @@
         android:columnCount="4"
         android:id="@+id/gridView"
         android:orientation="horizontal"
-        >
+        android:rowOrderPreserved="false"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:touchscreenBlocksFocus="false"
+        android:nestedScrollingEnabled="false"
+        android:longClickable="false">
         <TextView
-            android:text="Cell 0"
-            android:textSize="14dip" />
+            android:text=" "
+            android:textSize="18sp"
+            android:id="@+id/P0"/>
         <TextView
-            android:text="Cell 1"
-            android:textSize="14dip" />
+            android:text="All Records"
+            android:textSize="18sp"
+            android:id="@+id/P1"/>
         <TextView
-            android:text="Cell 2"
-            android:textSize="14dip" />
+            android:text="Last 10"
+            android:textSize="18sp"
+            android:id="@+id/P2"/>
         <TextView
-            android:text="Cell 3"
-            android:textSize="14dip" />
+            android:text="Last 100"
+            android:textSize="18sp"
+            android:id="@+id/P3"/>
         <TextView
-            android:text="Cell 4"
-            android:textSize="14dip" />
+            android:text="Minimum"
+            android:textSize="18sp"
+            android:id="@+id/P4"/>
         <TextView
             android:text="Cell 5"
-            android:textSize="14dip" />
+            android:textSize="18sp"
+            android:id="@+id/P5"/>
         <TextView
             android:text="Cell 6"
-            android:textSize="14dip" />
+            android:textSize="18sp"
+            android:id="@+id/P6"/>
         <TextView
             android:text="Cell 7"
-            android:textSize="14dip" />
+            android:textSize="18sp"
+            android:id="@+id/P7"/>
         <TextView
-            android:text="Cell 8"
-            android:textSize="14dip" />
+            android:text="Maximum"
+            android:textSize="18sp"
+            android:id="@+id/P8" />
         <TextView
             android:text="Cell 9"
-            android:textSize="14dip" />
+            android:textSize="18sp"
+            android:id="@+id/P9"/>
+        <TextView
+            android:text="Cell 10"
+            android:textSize="18sp"
+            android:id="@+id/P10"/>
+        <TextView
+            android:text="Cell 11"
+            android:textSize="18sp"
+            android:id="@+id/P11"/>
+        <TextView
+            android:text="Average"
+            android:textSize="18sp"
+            android:id="@+id/P12"/>
+        <TextView
+            android:text="Cell 13"
+            android:textSize="18sp"
+            android:id="@+id/P13"/>
+        <TextView
+            android:text="Cell 14"
+            android:textSize="18sp"
+            android:id="@+id/P14"/>
+        <TextView
+            android:text="Cell 15"
+            android:textSize="18sp"
+            android:id="@+id/P15"/>
+        <TextView
+            android:text="Median"
+            android:textSize="18sp"
+            android:id="@+id/P16"/>
+        <TextView
+            android:text="Cell 17"
+            android:textSize="18sp"
+            android:id="@+id/P17"/>
+        <TextView
+            android:text="Cell 18"
+            android:textSize="18sp"
+            android:id="@+id/P18"/>
+        <TextView
+            android:text="Cell 19"
+            android:textSize="18sp"
+            android:id="@+id/P19"/>
 
     </GridLayout>
 </RelativeLayout>
