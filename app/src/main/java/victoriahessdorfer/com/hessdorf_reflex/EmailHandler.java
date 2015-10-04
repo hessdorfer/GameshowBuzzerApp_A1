@@ -28,14 +28,17 @@ import android.view.View;
 
 public class EmailHandler {
 
+    /*
+        This class handles the basic email sending functionality.
+
+        Used the android developers API to model creating an email with intents:
+            https://developer.android.com/guide/components/intents-common.html#Email
+     */
 
     public void composeEmail(View view, String emailBody) {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        //intent.setType("*/*");
-        //intent.setType("message/rfc822");
-        //intent.putExtra(Intent.EXTRA_EMAIL, address);
         intent.putExtra(Intent.EXTRA_SUBJECT, "Stats from GameshowBuzzer Android Application");
 
         intent.putExtra(Intent.EXTRA_TEXT, emailBody);

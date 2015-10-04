@@ -22,10 +22,25 @@ import java.util.List;
 
  */
 
-// http://stackoverflow.com/questions/11955728/how-to-calculate-the-median-of-an-array
-
 
 public class StatisticsManager {
+
+    /*
+        This class handles the statistics calculations for both Single and Multiplayer Modes.
+        For multi player, it calculates buzzer presses, and for single player it calculates min,
+        max, median and average of reaction times. It is all returned in the class Combined.
+
+        Used the android developer guide for help with dialogs and handlers:
+            http://developer.android.com/guide/topics/ui/dialogs.html
+            http://developer.android.com/reference/android/os/Handler.html
+
+        Used stack overflow with help with median calculation, for general style, did not copy code:
+            http://stackoverflow.com/questions/11955728/how-to-calculate-the-median-of-an-array
+            User: lynn, answered Aug 14 '12 at 15:37, retrieved on October 4th 2015
+
+
+
+     */
     
 
     private DataRetentionHandler.SinglePlayerObj singlePlayerObj;

@@ -24,6 +24,13 @@ import android.widget.TextView;
 
 public class StatsModeActivity extends AppCompatActivity {
 
+    /*
+        This class handles the statistics mode activity. It fills
+        the table with the correct data, and uses the Statistics Manager
+        to do so. It also outsources the email sending and clearing statistics
+        code.
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +122,6 @@ public class StatsModeActivity extends AppCompatActivity {
 
         mTextView = (TextView) findViewById(R.id.P39);
         mTextView.setText(Long.toString(combined.fourPlayer.p4));
-
 
 
     }

@@ -25,6 +25,12 @@ import android.widget.Button;
 
 public class MultiPlayerModeActivity extends AppCompatActivity {
 
+    /*
+        This class acts as the main menu for multiplayer, and
+        handles the button presses for different choices of multiplayer
+        modes.
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

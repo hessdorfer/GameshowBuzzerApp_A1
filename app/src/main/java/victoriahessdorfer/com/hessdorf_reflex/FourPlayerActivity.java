@@ -26,7 +26,11 @@ import android.widget.Button;
 
 public class FourPlayerActivity extends AppCompatActivity {
 
-    protected long startTime;
+    /*
+        This class handles the basic button presses in the four
+        player activity, and calls the DataRetentionHandler to
+        implement saving.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +40,14 @@ public class FourPlayerActivity extends AppCompatActivity {
     }
 
     public void chosenButton(View view) {
-        // I can't extend another class, so i'm creating an instance of my superclass
-        // and calling its method.
 
         Button button = (Button) view;
         String string = (String) button.getText();
 
+        // use DataRetentionHandler to save
         DataRetentionHandler dataRetentionHandler = new DataRetentionHandler();
         dataRetentionHandler.gsonAddMultiPlayer(string, getApplicationContext(), "FourPlayerSave");
         string = string + " won!";
-
-        // record who won, and what mode it was in
 
         final AlertDialog infoDialog = new AlertDialog.Builder(this).create();
         infoDialog.setMessage(string);

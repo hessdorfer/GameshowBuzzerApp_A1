@@ -28,7 +28,34 @@
     <favorites_list name="hessdorf-reflex" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="DataRetentionHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/DataRetentionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4810345">
+              <caret line="182" column="51" selection-start-line="182" selection-start-column="51" selection-end-line="182" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6352#6353#0" expanded="true" />
+                <element signature="e#6396#6397#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticsManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatisticsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1477,15 +1504,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/FourPlayer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/ThreePlayer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/TwoPlayer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/EmailHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/TwoPlayerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/FourPlayerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/ThreePlayerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatsModeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/EmailHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MainMenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MultiPlayerModeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerModeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatisticsManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatsModeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/TwoPlayerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/ThreePlayerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MainMenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/DataRetentionHandler.java" />
       </list>
     </option>
@@ -1834,14 +1861,14 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25168815" sideWeight="0.5104741" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25168815" sideWeight="0.4895259" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1903,6 +1930,8 @@
           <caret line="30" column="67" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1923,6 +1952,8 @@
           <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1951,6 +1982,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1987,6 +2020,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2023,6 +2058,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2059,6 +2096,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2095,6 +2134,8 @@
           <caret line="118" column="52" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2131,6 +2172,8 @@
           <caret line="118" column="52" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2167,6 +2210,8 @@
           <caret line="118" column="52" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2271,30 +2316,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/DataRetentionHandler.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/TwoPlayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4362069">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatisticsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5689655">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/EmailHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69827586">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.25862068">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2303,46 +2328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/FourPlayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62068963">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MainMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1896552">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MultiPlayerModeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5913793">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerModeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23275863">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatsModeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0034482758">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2351,20 +2338,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/ThreePlayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67241377">
-          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.5344828">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/TwoPlayerActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatsModeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136">
-          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        <state vertical-scroll-proportion="-2.8706896">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/EmailHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15517241">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MainMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35344827">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/MultiPlayerModeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7758621">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/SinglePlayerModeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.275862">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3073#3273#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/StatisticsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/victoriahessdorfer/com/hessdorf_reflex/DataRetentionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4810345">
+          <caret line="182" column="51" selection-start-line="182" selection-start-column="51" selection-end-line="182" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6396#6397#0" expanded="true" />
           </folding>
         </state>
       </provider>

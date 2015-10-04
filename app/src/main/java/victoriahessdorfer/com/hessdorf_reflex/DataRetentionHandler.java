@@ -33,16 +33,24 @@ import java.util.ArrayList;
 
  */
 
-/**
- *
- *
- * http://developer.android.com/reference/android/content/Context.html
- * https://github.com/joshua2ua/lonelyTwitter/blob/master/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java#L59
- * http://stackoverflow.com/questions/9598707/gson-throwing-expected-begin-object-but-was-begin-array
- * http://stackoverflow.com/questions/6484428/java-read-object-input-stream-into-arraylist
- */
+public class DataRetentionHandler {
 
-public class DataRetentionHandler implements Serializable {
+
+    /*
+        This class handles the saving / loading from files, as well as clearing the files.
+
+        Used the android developer guide for help with context:
+            http://developer.android.com/reference/android/content/Context.html
+
+        Used stack overflow with help with reading from a file with GSON:
+            http://stackoverflow.com/questions/9598707/gson-throwing-expected-begin-object-but-was-begin-array
+            User: Brian Roach, answered Mar 7 '12 at 9:42, retrieved October 2nd 2015
+
+        Used lonelyTwitter with help with GSON saving methods:
+            https://github.com/joshua2ua/lonelyTwitter
+            Author: Joshua Campbell, retrieved on October 1st 2015
+
+     */
 
     private static final String TwoPlayerFilename = "TwoPlayerSave.sav";
     private static final String ThreePlayerFilename = "ThreePlayerSave.sav";

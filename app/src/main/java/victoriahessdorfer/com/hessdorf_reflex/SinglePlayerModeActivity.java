@@ -29,19 +29,26 @@ import java.util.Random;
 
  */
 
-/*
-* got Dialog help from http://www.androidhive.info/2011/09/how-to-show-alert-dialog-in-android/
-*  By Ravi Tamada . on September 18, 2011
-*  and the Android API
-*  http://developer.android.com/guide/topics/ui/dialogs.html
-*  http://developer.android.com/reference/android/os/Handler.html
-*  http://stackoverflow.com/questions/1521640/standard-android-button-with-a-different-color
-*  http://stackoverflow.com/questions/3342651/how-can-i-delay-a-java-program-for-a-few-seconds
-*  https://newcircle.com/s/post/881/example_show_alert_dialog_in_android
-*/
+
 
 
 public class SinglePlayerModeActivity extends AppCompatActivity {
+
+    /*
+        This class handles the single player mode functionality, including calling the
+        DataRetentionHandler to save, showing initial information, displaying time taken and
+        complaining if the button was pressed too soon.
+
+        Used the android developer guide for help with dialogs and handlers:
+            http://developer.android.com/guide/topics/ui/dialogs.html
+            http://developer.android.com/reference/android/os/Handler.html
+
+        Used stack overflow with help on button colors:
+            http://stackoverflow.com/questions/11176365/how-do-i-change-the-text-color-of-a-button
+            by user ρяσѕρєя K, answered Jun 24 '12 at 9:37 and retrieved on October 1st 2015
+
+
+     */
 
     protected long startTime;
 
@@ -68,7 +75,6 @@ public class SinglePlayerModeActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 waitForGame();
-                //Toast.makeText(getApplicationContext(), "Go!", Toast.LENGTH_SHORT).show();
             }
 
         });

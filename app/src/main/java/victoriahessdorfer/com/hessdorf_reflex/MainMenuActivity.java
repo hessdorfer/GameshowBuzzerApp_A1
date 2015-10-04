@@ -26,6 +26,10 @@ import android.view.View;
 
 public class MainMenuActivity extends AppCompatActivity {
 
+    /*
+        This class handles the main menu button presses.
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
