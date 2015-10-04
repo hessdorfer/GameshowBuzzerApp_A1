@@ -3,8 +3,24 @@ package victoriahessdorfer.com.hessdorf_reflex;
 import java.util.ArrayList;
 import android.content.Context;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+
+/*
+    Copyright 2015 Victoria Hessdorfer
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ */
 
 // http://stackoverflow.com/questions/11955728/how-to-calculate-the-median-of-an-array
 
@@ -12,13 +28,13 @@ import java.util.List;
 public class StatisticsManager {
     
 
-    private DataRetention.SinglePlayerObj singlePlayerObj;
-    private ArrayList<DataRetention.SinglePlayerObj> arrayALL;
-    private ArrayList<DataRetention.SinglePlayerObj> arrayLast10;
-    private ArrayList<DataRetention.SinglePlayerObj> arrayLast100;
-    private ArrayList<DataRetention.MultiPlayerObj> twoPlayerArray;
-    private ArrayList<DataRetention.MultiPlayerObj> threePlayerArray;
-    private ArrayList<DataRetention.MultiPlayerObj> fourPlayerArray;
+    private DataRetentionHandler.SinglePlayerObj singlePlayerObj;
+    private ArrayList<DataRetentionHandler.SinglePlayerObj> arrayALL;
+    private ArrayList<DataRetentionHandler.SinglePlayerObj> arrayLast10;
+    private ArrayList<DataRetentionHandler.SinglePlayerObj> arrayLast100;
+    private ArrayList<DataRetentionHandler.MultiPlayerObj> twoPlayerArray;
+    private ArrayList<DataRetentionHandler.MultiPlayerObj> threePlayerArray;
+    private ArrayList<DataRetentionHandler.MultiPlayerObj> fourPlayerArray;
 
     public class Min {
         long overall = 0;
@@ -114,7 +130,7 @@ public class StatisticsManager {
 
     public void fillArrays(Context context){
 
-        DataRetention d = new DataRetention();
+        DataRetentionHandler d = new DataRetentionHandler();
         arrayALL = d.gsonReadSinglePlayer(context);
 
         singlePlayerObj = d.returnSinglePlayerObj();
@@ -140,9 +156,9 @@ public class StatisticsManager {
             i++;
         }
 
-        twoPlayerArray = d.gsonReadMultiPlayer(context, "TwoPlayer");
-        threePlayerArray = d.gsonReadMultiPlayer(context, "ThreePlayer");
-        fourPlayerArray = d.gsonReadMultiPlayer(context, "FourPlayer");
+        twoPlayerArray = d.gsonReadMultiPlayer(context, "TwoPlayerSave");
+        threePlayerArray = d.gsonReadMultiPlayer(context, "ThreePlayerSave");
+        fourPlayerArray = d.gsonReadMultiPlayer(context, "FourPlayerSave");
 
     }
 
@@ -297,7 +313,7 @@ public class StatisticsManager {
 
     }
 
-    public List<Integer> sortList(ArrayList<DataRetention.SinglePlayerObj> o){
+    public List<Integer> sortList(ArrayList<DataRetentionHandler.SinglePlayerObj> o){
         List<Integer> l = new ArrayList<>();
 
         int i = 0;

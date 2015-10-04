@@ -1,33 +1,52 @@
 package victoriahessdorfer.com.hessdorf_reflex;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import android.content.Context;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Serializable;
-
-
-import android.content.Context;
-
-import java.io.*;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+import java.io.BufferedReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/*
+    Copyright 2015 Victoria Hessdorfer
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ */
+
 /**
+ *
+ *
  * http://developer.android.com/reference/android/content/Context.html
  * https://github.com/joshua2ua/lonelyTwitter/blob/master/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java#L59
  * http://stackoverflow.com/questions/9598707/gson-throwing-expected-begin-object-but-was-begin-array
  * http://stackoverflow.com/questions/6484428/java-read-object-input-stream-into-arraylist
  */
 
-public class DataRetention implements Serializable {
+public class DataRetentionHandler implements Serializable {
 
-    private static final String TwoPlayerFilename = "TwoPlayer.sav";
-    private static final String ThreePlayerFilename = "ThreePlayer.sav";
-    private static final String FourPlayerFilename = "FourPlayer.sav";
+    private static final String TwoPlayerFilename = "TwoPlayerSave.sav";
+    private static final String ThreePlayerFilename = "ThreePlayerSave.sav";
+    private static final String FourPlayerFilename = "FourPlayerSave.sav";
     private static final String SinglePlayerFilename = "SinglePlayer.sav";
 
     private ArrayList<MultiPlayerObj> multiPlayerObject;
@@ -47,16 +66,16 @@ public class DataRetention implements Serializable {
         String fileName = "";
 
         switch(saveType){
-            case "SinglePlayer":
+            case "SinglePlayerSave":
                 fileName = SinglePlayerFilename;
                 break;
-            case "TwoPlayer":
+            case "TwoPlayerSave":
                 fileName = TwoPlayerFilename;
                 break;
-            case "ThreePlayer":
+            case "ThreePlayerSave":
                 fileName = ThreePlayerFilename;
                 break;
-            case "FourPlayer":
+            case "FourPlayerSave":
                 fileName = FourPlayerFilename;
                 break;
         }
@@ -92,11 +111,11 @@ public class DataRetention implements Serializable {
 
         try {
             singlePlayerObject.add(obj);
-            gsonSave(context, "SinglePlayer");
+            gsonSave(context, "SinglePlayerSave");
         } catch (Exception e){
             singlePlayerObject = new ArrayList<SinglePlayerObj>();
             singlePlayerObject.add(obj);
-            gsonSave(context, "SinglePlayer");
+            gsonSave(context, "SinglePlayerSave");
         }
 
     }
@@ -111,7 +130,7 @@ public class DataRetention implements Serializable {
             OutputStreamWriter out = new OutputStreamWriter(fos);
             Gson gson = new Gson();
 
-            if (saveType == "SinglePlayer"){
+            if (saveType == "SinglePlayerSave"){
                 gson.toJson(singlePlayerObject, out);
             } else {
                 gson.toJson(multiPlayerObject, out);
@@ -162,11 +181,11 @@ public class DataRetention implements Serializable {
     public void gsonClear(Context context) {
 
         singlePlayerObject = new ArrayList<>();
-        gsonSave(context, "SinglePlayer");
+        gsonSave(context, "SinglePlayerSave");
         multiPlayerObject = new ArrayList<>();
-        gsonSave(context, "TwoPlayer");
-        gsonSave(context, "ThreePlayer");
-        gsonSave(context, "FourPlayer");
+        gsonSave(context, "TwoPlayerSave");
+        gsonSave(context, "ThreePlayerSave");
+        gsonSave(context, "FourPlayerSave");
 
     }
 
