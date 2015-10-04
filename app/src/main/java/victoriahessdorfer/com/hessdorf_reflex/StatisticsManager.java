@@ -5,6 +5,7 @@ import android.content.Context;
 
 
 public class StatisticsManager {
+    
 
     private DataRetention.SinglePlayerObj singlePlayerObj;
     private ArrayList<DataRetention.SinglePlayerObj> arrayALL;
@@ -89,11 +90,15 @@ public class StatisticsManager {
         DataRetention d = new DataRetention();
         arrayALL = d.gsonReadSinglePlayer(context);
 
+        singlePlayerObj = d.returnSinglePlayerObj();
+        arrayLast10 = d.returnSinglePlayerArray();
+        arrayLast100 = d.returnSinglePlayerArray();
+
         // grab array list of last ten entries
         int i = 0;
         int max = arrayALL.size();
         while (i < max & i < 10) {
-            singlePlayerObj.reactionTime = arrayALL.get(max - i).reactionTime;
+            singlePlayerObj.reactionTime = arrayALL.get(max - i - 1).reactionTime;
             arrayLast10.add(singlePlayerObj);
             i++;
         }
@@ -101,10 +106,11 @@ public class StatisticsManager {
         // grab array list of last 100 entries
         i = 0;
         while (i < max & i < 100) {
-            singlePlayerObj.reactionTime = arrayALL.get(max - i).reactionTime;
+            singlePlayerObj.reactionTime = arrayALL.get(max - i - 1).reactionTime;
             arrayLast100.add(singlePlayerObj);
             i++;
         }
+
 
         twoPlayerArray = d.gsonReadMultiPlayer(context, "TwoPlayer");
         threePlayerArray = d.gsonReadMultiPlayer(context, "ThreePlayer");

@@ -172,6 +172,14 @@ public class DataRetention implements Serializable {
 
     }
 
+    public SinglePlayerObj returnSinglePlayerObj(){
+        return new SinglePlayerObj();
+    }
+
+    public ArrayList<SinglePlayerObj> returnSinglePlayerArray(){
+        return new ArrayList<SinglePlayerObj>();
+    }
+
 
 
 }
