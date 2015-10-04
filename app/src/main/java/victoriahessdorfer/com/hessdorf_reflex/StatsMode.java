@@ -112,5 +112,12 @@ public class StatsMode extends AppCompatActivity {
         fillTable();
     }
 
+    public void createEmail(View view){
+        EmailHandler h = new EmailHandler();
+        h.composeEmail("hessdorf@ualberta.ca", getApplicationContext());
+
+
+    }
+
 
 }
