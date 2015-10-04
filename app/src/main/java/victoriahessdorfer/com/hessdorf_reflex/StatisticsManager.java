@@ -2,6 +2,11 @@ package victoriahessdorfer.com.hessdorf_reflex;
 
 import java.util.ArrayList;
 import android.content.Context;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+// http://stackoverflow.com/questions/11955728/how-to-calculate-the-median-of-an-array
 
 
 public class StatisticsManager {
@@ -258,12 +263,52 @@ public class StatisticsManager {
 
         Median median = new Median();
 
-        median.overall = 0;
-        median.last10 = 0;
-        median.last100 = 0;
+        // all
+
+        List<Integer> all = sortList(arrayALL);
+        int len = all.size();
+
+        if (len % 2 == 0)
+            median.overall = (all.get(len/2) + all.get((len/2)-1))/2;
+        else
+            median.overall = all.get(len/2);
+
+        // last ten
+
+        all = sortList(arrayLast10);
+        len = all.size();
+
+        if (len % 2 == 0)
+            median.last10 = (all.get(len/2) + all.get((len/2)-1))/2;
+        else
+            median.last10 = all.get(len/2);
+
+        // last 100
+
+        all = sortList(arrayLast100);
+        len = all.size();
+
+        if (len % 2 == 0)
+            median.last100 = (all.get(len/2) + all.get((len/2)-1))/2;
+        else
+            median.last100 = all.get(len/2);
 
         return median;
 
+    }
+
+    public List<Integer> sortList(ArrayList<DataRetention.SinglePlayerObj> o){
+        List<Integer> l = new ArrayList<>();
+
+        int i = 0;
+        while(i < o.size()){
+           l.add((int) o.get(i).reactionTime);
+           i++;
+        }
+
+        Collections.sort(l);
+
+        return l;
     }
 
     public TwoPlayer getTwoPlayerStats(){
