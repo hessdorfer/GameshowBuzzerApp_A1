@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/pre-dexed/debug/classes-d9321ac13bf8d46f77f48b34770a4c282ef987d4.jar" />
+    </item>
+    <item
+        jar="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-33bf8b6a8987c6c289363e5c0a493be51f545a78.jar" />
+    </item>
+    <item
+        jar="/Users/victoria/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-fe976781259e9c9e0d51a1b2ba6ea5be415563f8.jar" />
+    </item>
+    <item
+        jar="/Users/victoria/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/pre-dexed/debug/gson-2.2.4-fcbfbc694c37faa38ec9bb5397b85bbd4b2a8ad4.jar" />
+    </item>
+    <item
+        jar="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/victoria/AndroidStudioProjects/hessdorf-reflex/app/build/intermediates/pre-dexed/debug/classes-0dede9094ef74306fd37128bd00fb86516c1ed44.jar" />
+    </item>
+
+</items>
