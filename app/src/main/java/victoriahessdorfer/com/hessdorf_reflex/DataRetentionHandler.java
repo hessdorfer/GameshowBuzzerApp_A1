@@ -69,7 +69,7 @@ public class DataRetentionHandler {
 
     }
 
-    public String getFileName(String saveType){
+    private String getFileName(String saveType){
 
         String fileName = "";
 
@@ -103,7 +103,7 @@ public class DataRetentionHandler {
             multiPlayerObject.add(obj);
             gsonSave(context, saveType);
         } catch (Exception e){
-            multiPlayerObject = new ArrayList<MultiPlayerObj>();
+            multiPlayerObject = new ArrayList<>();
             multiPlayerObject.add(obj);
             gsonSave(context, saveType);
         }
@@ -199,12 +199,6 @@ public class DataRetentionHandler {
 
     public SinglePlayerObj returnSinglePlayerObj(){
         return new SinglePlayerObj();
-    }
-
-    public SinglePlayerObj returnSinglePlayerObj(long reactionTime){
-        SinglePlayerObj s = new SinglePlayerObj();
-        s.reactionTime = reactionTime;
-        return s;
     }
 
     public ArrayList<SinglePlayerObj> returnSinglePlayerArray(){

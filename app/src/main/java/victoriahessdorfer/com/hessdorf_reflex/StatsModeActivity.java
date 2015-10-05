@@ -126,7 +126,7 @@ public class StatsModeActivity extends AppCompatActivity {
 
     }
 
-    public String parseDataAsString(){
+    private String parseDataAsString(){
 
         String s = "";
 

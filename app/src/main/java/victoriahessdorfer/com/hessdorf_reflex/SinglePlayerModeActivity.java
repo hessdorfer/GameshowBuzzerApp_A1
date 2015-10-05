@@ -50,7 +50,7 @@ public class SinglePlayerModeActivity extends AppCompatActivity {
 
      */
 
-    protected long startTime;
+    private long startTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class SinglePlayerModeActivity extends AppCompatActivity {
 
     }
 
-    protected void showSinglePlayerInfo() {
+    private void showSinglePlayerInfo() {
 
         AlertDialog infoDialog = new AlertDialog.Builder(this).create();
 
@@ -84,7 +84,7 @@ public class SinglePlayerModeActivity extends AppCompatActivity {
 
     }
 
-    protected void waitForGame(){
+    private void waitForGame(){
 
         int upperBound = 2000;
         int lowerBound = 10;
@@ -106,7 +106,7 @@ public class SinglePlayerModeActivity extends AppCompatActivity {
 
     }
 
-    protected void displayTimeTaken(long endTime){
+    private void displayTimeTaken(long endTime){
 
         String string;
         if (endTime == -1) {

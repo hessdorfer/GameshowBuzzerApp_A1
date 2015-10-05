@@ -52,54 +52,54 @@ public class StatisticsManager {
     private ArrayList<DataRetentionHandler.MultiPlayerObj> fourPlayerArray;
 
     public class Min {
-        long overall = 0;
-        long last10 = 0;
-        long last100 = 0;
+        public long overall = 0;
+        public long last10 = 0;
+        public long last100 = 0;
     }
 
     public class Max {
-        long overall = 0;
-        long last10 = 0;
-        long last100 = 0;
+        public long overall = 0;
+        public long last10 = 0;
+        public long last100 = 0;
     }
     public class Average {
-        long overall = 0;
-        long last10 = 0;
-        long last100= 0;
+        public long overall = 0;
+        public long last10 = 0;
+        public long last100= 0;
     }
 
     public class Median {
-        long overall = 0;
-        long last10 = 0;
-        long last100 = 0;
+        public long overall = 0;
+        public long last10 = 0;
+        public long last100 = 0;
     }
 
     public class TwoPlayer {
-        long p1 = 0;
-        long p2 = 0;
+        public long p1 = 0;
+        public long p2 = 0;
     }
 
     public class ThreePlayer {
-        long p1 = 0;
-        long p2 = 0;
-        long p3 = 0;
+        public long p1 = 0;
+        public long p2 = 0;
+        public long p3 = 0;
     }
 
     public class FourPlayer {
-        long p1 = 0;
-        long p2 = 0;
-        long p3 = 0;
-        long p4 = 0;
+        public long p1 = 0;
+        public long p2 = 0;
+        public long p3 = 0;
+        public long p4 = 0;
     }
 
     public class Combined {
-        Min min;
-        Max max;
-        Average average;
-        Median median;
-        TwoPlayer twoPlayer;
-        ThreePlayer threePlayer;
-        FourPlayer fourPlayer;
+        public Min min;
+        public Max max;
+        public Average average;
+        public Median median;
+        public TwoPlayer twoPlayer;
+        public ThreePlayer threePlayer;
+        public FourPlayer fourPlayer;
     }
 
     public Combined getAll(Context context){
